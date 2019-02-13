@@ -106,7 +106,7 @@ public class ReactiveCFAccessorImpl implements CFAccessor {
 	}
 
 	private PasswordGrantTokenProvider tokenProvider() {
-		PasswordGrantTokenProvider.builder().password(this.password).username(this.username).loginHint("%7B%22origin%22%3A%22uaa%22%7D").build();
+		return PasswordGrantTokenProvider.builder().password(this.password).username(this.username).loginHint("%7B%22origin%22%3A%22uaa%22%7D").build();
 	}
 
 	private ProxyConfiguration proxyConfiguration() throws ConfigurationException {
